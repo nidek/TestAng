@@ -1,0 +1,23 @@
+﻿@model MVCAngular.Models.Start.StartVm
+@{
+    ViewBag.Title = "Start";
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+
+<div class="container" ng-controller="startController">
+    <div class="row">
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li><span class="navbar-brand">Start</span></li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/League">Leauge</a></li>
+                    <li><a href="/Team">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

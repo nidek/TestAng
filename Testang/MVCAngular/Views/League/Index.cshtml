@@ -1,0 +1,39 @@
+﻿@model string
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+
+@section JavascriptInHead
+{
+    <script src="~/Scripts/Leagues/league-controller.js"></script>
+    <script type="text/javascript" >
+        startModule.factory('bootstrappedLeagues', function() {
+            return {
+                leagues: @Html.Raw(Model)
+                };
+        });
+    </script>   
+}
+
+<div class="container" ng-controller="leagueController">
+    <div class="row">
+    <div class="span10">
+        <h2>Ligor</h2>
+    </div>
+    </div>
+        
+    <div class="row">
+        <div class="span2">
+            <table class="table table-condensed table-hover">
+                <tr>
+                    <th>Liga</th>
+                    <th>Land</th>
+                </tr>
+                <tr ng-repeat="league in leagues">
+                    <td>{{league.name}}</td>
+                    <td>{{league.country}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

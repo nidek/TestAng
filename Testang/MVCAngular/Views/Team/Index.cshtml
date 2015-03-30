@@ -1,0 +1,44 @@
+﻿@model string
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+
+@section JavascriptInHead
+{
+    <script src="~/Scripts/Teams/team-controller.js"></script>
+    <script type="text/javascript" >
+        startModule.factory('bootstrappedTeams', function() {
+            return {
+                teams: @Html.Raw(Model)
+                };
+        });
+    </script>   
+}
+
+<div class="container" ng-controller="teamController">
+    <div class="row">
+    <div class="span10">
+        <h2>Lag</h2>
+    </div>
+    </div>
+        
+    <div class="row">
+        <div class="span2">
+            <table class="table table-condensed table-hover">
+                <tr>
+                    <th>Lag</th>
+                    <th>Liga</th>
+                    <th>Placering</th>
+                </tr>
+                <tr ng-repeat="team in teams">
+                    <td>{{team.name}}</td>
+                    <td>{{team.league}}</td>
+                    <td>{{team.place}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
