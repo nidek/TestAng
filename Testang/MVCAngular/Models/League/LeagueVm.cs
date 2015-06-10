@@ -8,7 +8,6 @@ namespace MVCAngular.Models.League
     public class LeagueVm
     {
         public string name { get; set; }
-        public string country { get; set; }
-        
+        public string country { get; set; }        
     }
 }

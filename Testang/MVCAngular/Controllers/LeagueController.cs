@@ -5,12 +5,11 @@ namespace MVCAngular.Controllers
 {
     public class LeagueController : Controller
     {
-        private StartVmBuilder _regristrationVmBuilder = new StartVmBuilder();
+        private readonly StartVmBuilder _regristrationVmBuilder = new StartVmBuilder();
 
         public ActionResult Index()
         {
             return View("index", "", _regristrationVmBuilder.GetSerializedLeagues());
         }
-  
     }
 }
