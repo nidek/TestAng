@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";    
 }
 
-<div class="container" ng-controller="startController">
+<div class="container">
     <div class="row">
         <div class="navbar navbar-default">
             <div class="navbar-header">
@@ -14,10 +14,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/League">Leauge</a></li>
-                    <li><a href="/Team">Team</a></li>
+                    <li><a href="/Start/League">Leauge</a></li>
+                    <li><a href="/Start/Team">Team</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+<div ng-view></div>

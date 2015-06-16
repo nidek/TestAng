@@ -149,6 +149,8 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\startModule.js" />
     <Content Include="Scripts\Teams\team-controller.js" />
+    <Content Include="Templates\League.html" />
+    <Content Include="Templates\Team.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

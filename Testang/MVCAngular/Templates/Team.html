@@ -1,0 +1,22 @@
+﻿<div class="row">
+    <div class="span10">
+        <h2>Lag</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span2">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <th>Lag</th>
+                <th>Liga</th>
+                <th>Placering</th>
+            </tr>
+            <tr ng-repeat="team in teams">
+                <td>{{team.name}}</td>
+                <td>{{team.league}}</td>
+                <td>{{team.place}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
